@@ -5,6 +5,7 @@
 import React from 'react'
 import AddTodo from '../containers/AddTodo'
 import TodoListContainer from '../containers/TodoList'
+import Footer from './Footer'
 
 const App = () => (
     <div>
@@ -12,6 +13,7 @@ const App = () => (
       <AddTodo/>
       <hr/>
       <TodoListContainer/>
+      <Footer/>
     </div>
 );
 
