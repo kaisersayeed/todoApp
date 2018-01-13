@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Todo = (props) => (
-  <li>
-    {props.todo.text}
+const Todo = ({todo, toggleTodo}) => (
+  <li onClick={(e)=>{
+    e.preventDefault();
+    toggleTodo(todo.id)
+  }}>
+    {todo.text}
   </li>
 );
 
