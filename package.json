@@ -1,0 +1,29 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Simple todo App using Redux with React and Babel support",
+  "main": "index.js",
+  "repository": "https://github.com/kaisersayeed/todoApp.git",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "author": "Kaiser Sayeed",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "enzyme": "^2.8.2",
+    "react-addons-test-utils": "^15.5.1",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "babel-preset-stage-1": "^6.1.18",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.5.2"
+  }
+}
