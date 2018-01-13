@@ -8,24 +8,21 @@ class AddTodo extends Component {
     super(props);
     this.state = { todoInput: "" };
 
-    this.onInputChange = this.onInputChange.bind(this);
-    this.onFormSubmit = this.onFormSubmit.bind(this);
-  }
+    this.onInputChange = (event)=> {
+      this.setState({ todoInput: event.target.value });
+    };
 
-  onInputChange(event) {
-    this.setState({ todoInput: event.target.value });
-  }
+    this.onFormSubmit = (event) => {
+      event.preventDefault();
 
-  onFormSubmit(event) {
-    event.preventDefault();
+      const todo = this.state.todoInput;
 
-    const todo = this.state.todoInput;
-
-    if(!todo.trim()) {
-      return;
-    }
-    this.props.addTodo(todo);
-    this.setState({todoInput: ''});
+      if(!todo.trim()) {
+        return;
+      }
+      this.props.addTodo(todo);
+      this.setState({todoInput: ''});
+    };
   }
 
   render(){
@@ -46,13 +43,12 @@ class AddTodo extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch)=> {
   return bindActionCreators({addTodo}, dispatch);
-}
+};
 
-function mapStateToProps(state) {
-  console.log('todoList', state.todos);
-  return {todos: state.todos};
-}
+const mapStateToProps = ({todos})=> {
+  return {todos};
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodo);
