@@ -4,7 +4,7 @@
 
 import React from 'react'
 import AddTodo from '../containers/AddTodo'
-import TodoListContainer from '../containers/TodoList'
+import FilteredTodoListContainer from '../containers/FilteredTodoList'
 import Footer from './Footer'
 
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
       This is a simple Todo App.
       <AddTodo/>
       <hr/>
-      <TodoListContainer/>
+      <FilteredTodoListContainer/>
       <Footer/>
     </div>
 );
