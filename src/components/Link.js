@@ -1,16 +1,15 @@
 import React from 'react'
 
-const Link = ({ active, children, onClick }) => {
+const Link = ({ active, children, filter, setVisibilityFilter }) => {
   if (active) {
     return <span>{children}</span>
   }
 
   return (
-    // eslint-disable-next-line
     <a href="#"
        onClick={e => {
-         e.preventDefault()
-         onClick()
+         e.preventDefault();
+         setVisibilityFilter(filter);
        }}
     >
       {children}
